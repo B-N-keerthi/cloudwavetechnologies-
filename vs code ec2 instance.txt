@@ -1,0 +1,11 @@
+
+
+resource "aws_instance" "linux-instance" {
+  ami           = "ami-0abcdef1234567890"  # Replace with a valid Linux AMI ID
+  instance_type = "t2.micro"              # Instance type
+  key_name      = "your-key-pair"         # Your AWS key pair
+  subnet_id     = "subnet-xxxxxxx"        # Optional, if in a VPC
+  tags = {
+    Name = "MyLinuxServer"
+  }
+}
